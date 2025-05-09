@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EB0VCKBSR6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EB0VCKBSR6');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Nanny Knits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-gray-800">
+
+    <header class="bg-slate-100 shadow-md">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center relative">
+            <a href="index.html" class="text-2xl font-bold text-slate-800">Nanny Knits</a>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="text-slate-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <span class="sr-only">Open main menu</span>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-slate-100 shadow-md flex flex-col items-center space-y-2 py-4 md:flex md:relative md:top-auto md:left-auto md:right-auto md:bg-transparent md:shadow-none md:flex-row md:space-y-0 md:space-x-4 md:py-0 md:items-center">
+                <a href="index.html" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">About</a>
+                <a href="gallery.html" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Gallery</a>
+                <a href="services.html" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Services</a>
+                <a href="contact.html" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="services" class="bg-purple-50 py-16 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-slate-800 text-center mb-12">Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto md:items-start">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center border border-purple-200">
+                        <h3 class="text-xl font-bold text-purple-700 mb-3">Custom Blankets</h3>
+                        <p class="text-gray-700">Have a specific color, pattern, or size in mind? Let's create the perfect blanket together! Contact me to discuss your custom order.</p>
+                    </div>
+
+                    <div id="standard-blankets-toggle-card" class="bg-white p-6 rounded-lg shadow-md border border-purple-200 cursor-pointer hover:shadow-lg transition-shadow duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-opacity-75" tabindex="0" aria-expanded="false" aria-controls="standard-blankets-pricing-details">
+                        <div class="flex justify-center items-center mb-3 text-center">
+                            <h3 class="text-xl font-bold text-purple-700">Standard Blankets</h3>
+                            <svg id="pricing-toggle-icon" class="w-5 h-5 ml-2 text-purple-700 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <p class="text-gray-700 mb-4 text-center">Browse the gallery for ready-to-go blankets. These are lovingly pre-made and waiting for a cozy home.</p>
+
+                        <div id="standard-blankets-pricing-details" class="hidden mt-4 pt-4 border-t border-purple-200 text-left">
+                            <h4 class="text-lg font-semibold text-purple-700 mb-3 text-center">Standard Blanket Pricing</h4>
+                            <ul class="text-gray-700 space-y-1 text-sm sm:text-base">
+                                <li><span>Baby size:</span> <span>$45.00</span></li>
+                                <li><span>Lap:</span> <span>$65.00</span></li>
+                                <li><span>Throw:</span> <span>$75.00</span></li>
+                                <li><span>Twin:</span> <span>$125.00</span></li>
+                                <li><span>Queen:</span> <span>$150.00</span></li>
+                                <li><span>King:</span> <span>$200.00</span></li>
+                            </ul>
+                            <p class="text-xs text-gray-600 mt-3 text-center">Prices are for standard patterns and yarns. Customizations may affect the final price.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-100 text-slate-800 text-center py-6 mt-auto">
+        <p>&copy; <span id="current-year"></span> Nanny Knits. All rights reserved.</p>
+        <p class="text-sm mt-1 text-gray-600">Website lovingly crafted.</p>
+    </footer>
+
+    <script>
+        // --- Script to Set Current Year in Footer ---
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // --- Hamburger Menu Toggle Functionality ---
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenu.classList.toggle('hidden');
+                menuButton.setAttribute('aria-expanded', String(!isExpanded));
+            });
+
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                });
+            });
+        } else {
+            console.error("Mobile menu button or menu container not found!");
+        }
+
+        // --- Standard Blankets Card Pricing Toggle Functionality ---
+        const standardBlanketsCard = document.getElementById('standard-blankets-toggle-card');
+        const pricingDetails = document.getElementById('standard-blankets-pricing-details');
+        const pricingToggleIcon = document.getElementById('pricing-toggle-icon'); 
+
+        if (standardBlanketsCard && pricingDetails && pricingToggleIcon) {
+            const togglePricing = () => {
+                const isHidden = pricingDetails.classList.toggle('hidden');
+                standardBlanketsCard.setAttribute('aria-expanded', String(!isHidden));
+                if (isHidden) {
+                    pricingToggleIcon.classList.remove('rotate-180'); 
+                } else {
+                    pricingToggleIcon.classList.add('rotate-180'); 
+                }
+            };
+            standardBlanketsCard.addEventListener('click', togglePricing);
+            standardBlanketsCard.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault(); 
+                    togglePricing();
+                }
+            });
+        } else {
+            console.error("Standard blankets card, pricing details element, or toggle icon not found! Toggle functionality will not work.");
+        }
+    </script>
+
+</body>
+</html>
