@@ -1,0 +1,52 @@
+/* Apply Inter font to the entire body */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Ensure footer doesn't overlap content if page is short */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Enable smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style headings to be bolder */
+h1, h2, h3 {
+    font-weight: 700; /* Bolder headings */
+}
+
+/* Basic transition for the mobile menu */
+#mobile-menu {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Styling for the pricing list items within the standard blankets card */
+#standard-blankets-pricing-details ul li {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out item name and price */
+    padding: 0.25rem 0; /* Add some vertical padding */
+}
+
+/* Align the item name (e.g., "Baby size:") to the left */
+#standard-blankets-pricing-details ul li span:first-child {
+    text-align: left;
+}
+
+/* Align the price (e.g., "$45.00") to the right and make it bold */
+#standard-blankets-pricing-details ul li span:last-child {
+    text-align: right;
+    font-weight: bold; /* Make prices stand out */
+}
+
+/* Ensure sticky header works as expected */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
