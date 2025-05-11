@@ -16,25 +16,74 @@
 
     <meta name="description" content="Welcome to Nanny Knits! Discover beautiful, handcrafted knitted blankets made with love by Laurie Reed in Plymouth, MA. Perfect for gifts and adding warmth to your home.">
 
-    <link rel="canonical" href="https://www.nannyknits.com/index"> 
+    <link rel="canonical" href="https://www.nannyknits.com/"> 
 
     <meta property="og:title" content="Nanny Knits - Handcrafted Blankets & Gifts | Plymouth, MA">
     <meta property="og:description" content="Explore unique, hand-knitted blankets from Nanny Knits. Each piece is crafted with passion by Laurie Reed, bringing warmth and comfort to homes.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nannyknits.com/index"> <meta property="og:image" content="https://placehold.co/1200x630/d1d5db/374151?text=Nanny+Knits+Home"> <meta property="og:image:alt" content="A collection of colorful hand-knitted blankets by Nanny Knits">
+    <meta property="og:url" content="https://www.nannyknits.com/"> 
+    <meta property="og:image" content="https://placehold.co/1200x630/d1d5db/374151?text=Nanny+Knits+Home"> 
+    <meta property="og:image:alt" content="A collection of colorful hand-knitted blankets by Nanny Knits">
     <meta property="og:site_name" content="Nanny Knits">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script> 
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"></noscript>
+    
+    <style>
+      /* Apply Inter font to the entire body */
+      body {
+          font-family: 'Inter', sans-serif;
+          /* Ensure footer doesn't overlap content if page is short */
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+      }
+      main {
+          flex-grow: 1;
+      }
+      /* Enable smooth scrolling for anchor links */
+      html {
+          scroll-behavior: smooth;
+      }
+      /* Style headings to be bolder */
+      h1, h2, h3 {
+          font-weight: 700; /* Bolder headings */
+      }
+      /* Basic transition for the mobile menu */
+      #mobile-menu {
+          transition: transform 0.3s ease-in-out;
+      }
+      /* Styling for the pricing list items within the standard blankets card */
+      #standard-blankets-pricing-details ul li {
+          display: flex; /* Use flexbox for alignment */
+          justify-content: space-between; /* Space out item name and price */
+          padding: 0.25rem 0; /* Add some vertical padding */
+      }
+      #standard-blankets-pricing-details ul li span:first-child {
+          text-align: left;
+      }
+      #standard-blankets-pricing-details ul li span:last-child {
+          text-align: right;
+          font-weight: bold; /* Make prices stand out */
+      }
+      /* Ensure sticky header works as expected */
+      header {
+          position: sticky;
+          top: 0;
+          z-index: 50;
+      }
+    </style>
 </head>
 <body class="bg-slate-50 text-gray-800">
 
     <header class="bg-slate-100 shadow-md">
         <nav class="container mx-auto px-4 py-3 flex justify-between items-center relative">
-            <a href="index" class="text-2xl font-bold text-slate-800">Nanny Knits</a>
+            <a href="/" class="text-2xl font-bold text-slate-800">Nanny Knits</a>
 
             <div class="md:hidden">
                 <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="text-slate-800 focus:outline-none">
@@ -44,7 +93,7 @@
             </div>
 
             <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-slate-100 shadow-md flex flex-col items-center space-y-2 py-4 md:flex md:relative md:top-auto md:left-auto md:right-auto md:bg-transparent md:shadow-none md:flex-row md:space-y-0 md:space-x-4 md:py-0 md:items-center">
-                <a href="index" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Home</a>
+                <a href="/" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Home</a>
                 <a href="gallery" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Gallery</a>
                 <a href="services" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Services</a>
                 <a href="contact" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Contact</a>
@@ -56,7 +105,11 @@
         <section id="about" class="bg-white py-16 px-4">
             <div class="container mx-auto text-center md:text-left md:flex md:items-center md:space-x-12">
                 <div class="md:w-1/3 mb-8 md:mb-0">
-                    <img src="https://placehold.co/400x400/d1d5db/374151?text=Laurie" alt="Photo of Laurie Reed, the knitter and heart behind Nanny Knits" class="rounded-full shadow-lg mx-auto w-48 h-48 md:w-full md:h-auto object-cover border-4 border-slate-200"> 
+                    <img src="https://placehold.co/400x400/d1d5db/374151?text=Laurie" 
+                         alt="Photo of Laurie Reed, the knitter and heart behind Nanny Knits" 
+                         class="rounded-full shadow-lg mx-auto w-48 h-48 md:w-full md:h-auto object-cover border-4 border-slate-200"
+                         width="400" height="400"
+                         fetchpriority="high"> 
                 </div>
                 <div class="md:w-2/3">
                     <h1 class="text-3xl font-bold text-slate-800 mb-4">Welcome to Nanny Knits</h1>
