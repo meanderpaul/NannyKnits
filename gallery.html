@@ -6,14 +6,12 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-EB0VCKBSR6');
     </script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nanny Knits Gallery - Custom Hand-Knitted Blanket Examples</title> 
-
     <meta name="description" content="View a gallery of beautiful custom hand-knitted blankets by Nanny Knits. Get inspired by various designs, colors, and themes for your own cozy creation.">
 
     <link rel="canonical" href="https://www.nannyknits.com/gallery"> 
@@ -21,32 +19,77 @@
     <meta property="og:title" content="Nanny Knits Photo Gallery - Handcrafted Blanket Designs">
     <meta property="og:description" content="Browse examples of custom-made knitted blankets from Nanny Knits. See the quality and creativity in every stitch.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nannyknits.com/gallery">
+    <meta property="og:url" content="https://www.nannyknits.com/gallery"> 
     <meta property="og:image" content="https://placehold.co/1200x630/86efac/166534?text=Nanny+Knits+Gallery+Highlight"> 
     <meta property="og:image:alt" content="A collage of beautiful hand-knitted blankets from the Nanny Knits gallery">
     <meta property="og:site_name" content="Nanny Knits">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script> 
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"></noscript>
+    
+    <style>
+      /* Apply Inter font to the entire body */
+      body {
+          font-family: 'Inter', sans-serif;
+          /* Ensure footer doesn't overlap content if page is short */
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+      }
+      main {
+          flex-grow: 1;
+      }
+      /* Enable smooth scrolling for anchor links */
+      html {
+          scroll-behavior: smooth;
+      }
+      /* Style headings to be bolder */
+      h1, h2, h3 {
+          font-weight: 700; /* Bolder headings */
+      }
+      /* Basic transition for the mobile menu */
+      #mobile-menu {
+          transition: transform 0.3s ease-in-out;
+      }
+      /* Styling for the pricing list items within the standard blankets card */
+      #standard-blankets-pricing-details ul li {
+          display: flex; /* Use flexbox for alignment */
+          justify-content: space-between; /* Space out item name and price */
+          padding: 0.25rem 0; /* Add some vertical padding */
+      }
+      #standard-blankets-pricing-details ul li span:first-child {
+          text-align: left;
+      }
+      #standard-blankets-pricing-details ul li span:last-child {
+          text-align: right;
+          font-weight: bold; /* Make prices stand out */
+      }
+      /* Ensure sticky header works as expected */
+      header {
+          position: sticky;
+          top: 0;
+          z-index: 50;
+      }
+    </style>
 </head>
 <body class="bg-slate-50 text-gray-800">
 
     <header class="bg-slate-100 shadow-md">
         <nav class="container mx-auto px-4 py-3 flex justify-between items-center relative">
-            <a href="index" class="text-2xl font-bold text-slate-800">Nanny Knits</a>
-
+            <a href="/" class="text-2xl font-bold text-slate-800">Nanny Knits</a>
             <div class="md:hidden">
                 <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="text-slate-800 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     <span class="sr-only">Open main menu</span>
                 </button>
             </div>
-
             <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-slate-100 shadow-md flex flex-col items-center space-y-2 py-4 md:flex md:relative md:top-auto md:left-auto md:right-auto md:bg-transparent md:shadow-none md:flex-row md:space-y-0 md:space-x-4 md:py-0 md:items-center">
-                <a href="index" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Home</a>
+                <a href="/" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Home</a>
                 <a href="gallery" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Gallery</a>
                 <a href="services" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Services</a>
                 <a href="contact" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Contact</a>
@@ -58,31 +101,57 @@
         <section id="gallery" class="bg-blue-50 py-16 px-4">
             <div class="container mx-auto">
                 <h1 class="text-3xl font-bold text-slate-800 text-center mb-12">Nanny Knits Gallery</h1>
-                <h2 class="text-xl font-bold text-slate-800 text-center mb-8">Custom Blanket Examples</h2> <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
-                      <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View brown, white, and green striped blanket on Instagram">
-                           <img src="photos/brown_white_green_stripe.jpg" alt="Brown, white, and green striped hand-knitted blanket" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
-                      </a>
-                      <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View pink and grey striped blanket on Instagram">
-                           <img src="photos/pink_grey_stripe.jpg" alt="Pink and grey striped hand-knitted blanket" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
-                      </a>
-                      <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View Hello Kitty themed blanket on Instagram">
-                           <img src="photos/hello_kitty.jpg" alt="Hello Kitty themed hand-knitted blanket with pink and white details" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
-                      </a>
-                      <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View anchor design blanket on Instagram">
-                           <img src="photos/anchor.jpg" alt="Hand-knitted blanket with a nautical anchor design" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
-                      </a>
-                      <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View Stitch themed blanket on Instagram">
-                           <img src="photos/stitch.JPG" alt="Stitch (from Lilo & Stitch) themed blue hand-knitted blanket" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
-                      </a>
-                      <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View Elmo themed blanket on Instagram">
-                           <img src="photos/elmo.jpg" alt="Elmo themed red hand-knitted blanket for children" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
-                      </a>
-                 </div>
-                <div class="text-center mt-12"> <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500
-                           text-white font-bold py-3 px-8 rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300 text-lg">
-                           View More on Instagram
-                      </a>
-                 </div>
+                <h2 class="text-xl font-bold text-slate-800 text-center mb-8">Custom Blanket Examples</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
+                    
+                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View brown, white, and green striped blanket on Instagram">
+                        <img src="photos/brown_white_green_stripe.jpg" 
+                             alt="Brown, white, and green striped hand-knitted blanket" 
+                             class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
+                             width="300" height="300" fetchpriority="high"   onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
+                    </a>
+                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View pink and grey striped blanket on Instagram">
+                        <img src="photos/pink_grey_stripe.jpg" 
+                             alt="Pink and grey striped hand-knitted blanket" 
+                             class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
+                             width="300" height="300" loading="lazy" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
+                    </a>
+                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View Hello Kitty themed blanket on Instagram">
+                        <img src="photos/hello_kitty.jpg" 
+                             alt="Hello Kitty themed hand-knitted blanket with pink and white details" 
+                             class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
+                             width="300" height="300" loading="lazy" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
+                    </a>
+                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View anchor design blanket on Instagram">
+                        <img src="photos/anchor.jpg" 
+                             alt="Hand-knitted blanket with a nautical anchor design" 
+                             class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
+                             width="300" height="300" loading="lazy" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
+                    </a>
+                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View Stitch themed blanket on Instagram">
+                        <img src="photos/stitch.JPG" 
+                             alt="Stitch (from Lilo & Stitch) themed blue hand-knitted blanket" 
+                             class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
+                             width="300" height="300" loading="lazy" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
+                    </a>
+                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View Elmo themed blanket on Instagram">
+                        <img src="photos/elmo.jpg" 
+                             alt="Elmo themed red hand-knitted blanket for children" 
+                             class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
+                             width="300" height="300" loading="lazy" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/300x300/fecaca/991b1b?text=Image+Not+Found';">
+                    </a>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500
+                               text-white font-bold py-3 px-8 rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300 text-lg">
+                        View More on Instagram
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -93,21 +162,16 @@
     </footer>
 
     <script>
-        // --- Script to Set Current Year in Footer ---
         document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // --- Hamburger Menu Toggle Functionality ---
         const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-
         if (menuButton && mobileMenu) {
             menuButton.addEventListener('click', () => {
                 const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
                 mobileMenu.classList.toggle('hidden');
                 menuButton.setAttribute('aria-expanded', String(!isExpanded));
             });
-
             mobileMenuLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
@@ -118,6 +182,5 @@
             console.error("Mobile menu button or menu container not found!");
         }
     </script>
-
 </body>
 </html>
