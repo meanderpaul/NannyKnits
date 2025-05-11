@@ -25,18 +25,21 @@
     <meta property="og:image" content="https://placehold.co/1200x630/d1d5db/374151?text=Nanny+Knits+Logo"> <meta property="og:image:alt" content="Nanny Knits Logo">
     <meta property="og:site_name" content="Nanny Knits">
 
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.16" defer></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"></noscript>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 text-gray-800">
 
     <header class="bg-slate-100 shadow-md">
         <nav class="container mx-auto px-4 py-3 flex justify-between items-center relative">
-            <a href="index" class="text-2xl font-bold text-slate-800">Nanny Knits</a>
+            <a href="/" class="text-2xl font-bold text-slate-800">Nanny Knits</a>
 
             <div class="md:hidden">
                 <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="text-slate-800 focus:outline-none">
@@ -46,7 +49,7 @@
             </div>
 
             <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-slate-100 shadow-md flex flex-col items-center space-y-2 py-4 md:flex md:relative md:top-auto md:left-auto md:right-auto md:bg-transparent md:shadow-none md:flex-row md:space-y-0 md:space-x-4 md:py-0 md:items-center">
-                <a href="index" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Home</a>
+                <a href="/" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Home</a>
                 <a href="gallery" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Gallery</a>
                 <a href="services" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Services</a>
                 <a href="contact" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Contact</a>
@@ -62,7 +65,7 @@
                     Interested in a custom hand-knitted blanket, have questions about our products, or just want to say hello? We'd love to hear from you! Click the button below to send an email directly to Laurie at Nanny Knits.
                 </p>
                 <a href="mailto:nannyknits01@gmail.com?subject=Nanny%20Knits%20Inquiry"
-                   class="inline-block bg-teal-600 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-teal-700 transition-colors duration-300">
+                   class="inline-block bg-teal-800 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-teal-900 transition-colors duration-300">
                     Email Nanny Knits
                 </a>
             </div>
