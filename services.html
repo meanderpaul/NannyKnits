@@ -84,6 +84,28 @@
                             <p class="text-xs text-gray-600 mt-3 text-center">Prices are for standard patterns and yarns. Customizations, intricate patterns, or premium yarns (wool, cotton blends) may affect the final price. Please contact for a detailed quote.</p>
                         </div>
                     </div>
+
+                    <div id="locations-toggle-card" class="bg-white p-6 rounded-lg shadow-md border border-purple-200 cursor-pointer hover:shadow-lg transition-shadow duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-opacity-75 md:col-span-2" tabindex="0" aria-expanded="false" aria-controls="locations-details">
+                        <div class="flex justify-center items-center mb-3 text-center">
+                            <h2 class="text-2xl font-bold text-purple-700">Find My Blankets!</h2>
+                            <svg id="locations-toggle-icon" class="w-5 h-5 ml-2 text-purple-700 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <p class="text-gray-700 mb-4 text-center">You can find a selection of my ready-made blankets at these fine local shops.</p>
+
+                        <div id="locations-details" class="hidden mt-4 pt-4 border-t border-purple-200 text-center">
+                            <ul class="space-y-4 text-gray-700">
+                                <li>
+                                    <p class="font-semibold text-lg">The Cozy Cottage</p>
+                                    <p>Plymouth, MA</p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold text-lg">Spruce Hurricane Boutique</p>
+                                    <p>North Conway Village, NH</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -144,6 +166,32 @@
             });
         } else {
             console.error("Standard blankets card, pricing details element, or toggle icon not found! Toggle functionality will not work.");
+        }
+
+        // --- Locations Card Toggle Functionality ---
+        const locationsCard = document.getElementById('locations-toggle-card');
+        const locationsDetails = document.getElementById('locations-details');
+        const locationsToggleIcon = document.getElementById('locations-toggle-icon');
+
+        if (locationsCard && locationsDetails && locationsToggleIcon) {
+            const toggleLocations = () => {
+                const isHidden = locationsDetails.classList.toggle('hidden');
+                locationsCard.setAttribute('aria-expanded', String(!isHidden));
+                if (isHidden) {
+                    locationsToggleIcon.classList.remove('rotate-180');
+                } else {
+                    locationsToggleIcon.classList.add('rotate-180');
+                }
+            };
+            locationsCard.addEventListener('click', toggleLocations);
+            locationsCard.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleLocations();
+                }
+            });
+        } else {
+            console.error("Locations card, details element, or toggle icon not found! Toggle functionality will not work.");
         }
     </script>
 
