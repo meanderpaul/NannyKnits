@@ -11,23 +11,24 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nanny Knits Gallery - Custom Hand-Knitted Blanket Examples</title> 
-    <meta name="description" content="View a gallery of beautiful custom hand-knitted blankets by Nanny Knits. Get inspired by various designs, colors, and themes for your own cozy creation.">
+    <title>Nanny Knits Gallery - Custom & Standard Blanket Examples</title>
+    <meta name="description" content="View a gallery of beautiful custom and standard hand-knitted blankets by Nanny Knits. Get inspired by various designs, colors, and themes.">
 
     <link rel="canonical" href="https://www.nannyknits.com/gallery"> 
 
     <meta property="og:title" content="Nanny Knits Photo Gallery - Handcrafted Blanket Designs">
-    <meta property="og:description" content="Browse examples of custom-made knitted blankets from Nanny Knits. See the quality and creativity in every stitch.">
+    <meta property="og:description" content="Browse examples of custom-made and standard knitted blankets from Nanny Knits. See the quality and creativity in every stitch.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nannyknits.com/gallery">  
+    <meta property="og:url" content="https://www.nannyknits.com/gallery"> 
     <meta property="og:image:alt" content="A collage of beautiful hand-knitted blankets from the Nanny Knits gallery">
     <meta property="og:site_name" content="Nanny Knits">
 
+    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com/3.4.16"></script> 
     
+    <!-- Load Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"></noscript>
     
@@ -55,19 +56,6 @@
       #mobile-menu {
           transition: transform 0.3s ease-in-out;
       }
-      /* Styling for the pricing list items within the standard blankets card */
-      #standard-blankets-pricing-details ul li {
-          display: flex; /* Use flexbox for alignment */
-          justify-content: space-between; /* Space out item name and price */
-          padding: 0.25rem 0; /* Add some vertical padding */
-      }
-      #standard-blankets-pricing-details ul li span:first-child {
-          text-align: left;
-      }
-      #standard-blankets-pricing-details ul li span:last-child {
-          text-align: right;
-          font-weight: bold; /* Make prices stand out */
-      }
       /* Ensure sticky header works as expected */
       header {
           position: sticky;
@@ -78,15 +66,18 @@
 </head>
 <body class="bg-slate-50 text-gray-800">
 
+    <!-- Header and Navigation -->
     <header class="bg-slate-100 shadow-md">
         <nav class="container mx-auto px-4 py-3 flex justify-between items-center relative">
             <a href="/" class="text-2xl font-bold text-slate-800">Nanny Knits</a>
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" class="text-slate-800 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     <span class="sr-only">Open main menu</span>
                 </button>
             </div>
+            <!-- Navigation Links -->
             <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-slate-100 shadow-md flex flex-col items-center space-y-2 py-4 md:flex md:relative md:top-auto md:left-auto md:right-auto md:bg-transparent md:shadow-none md:flex-row md:space-y-0 md:space-x-4 md:py-0 md:items-center">
                 <a href="/" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Home</a>
                 <a href="gallery" class="block px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-200 rounded w-full text-center md:w-auto md:hover:bg-transparent md:p-0">Gallery</a>
@@ -97,141 +88,35 @@
     </header>
 
     <main>
-        <section id="gallery" class="bg-blue-50 py-16 px-4">
+        <!-- Standard Blankets Gallery -->
+        <section id="standard-gallery" class="bg-blue-50 py-16 px-4">
             <div class="container mx-auto">
-                <h1 class="text-3xl font-bold text-slate-800 text-center mb-12">Nanny Knits Gallery</h1>
-                <h2 class="text-xl font-bold text-slate-800 text-center mb-8">Custom Blanket Examples</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
-                    
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View brown, white, and green striped blanket on Instagram">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="photos/brown_white_green_stripe_small.webp 400w, photos/brown_white_green_stripe_medium.webp 600w"
-                                    sizes="(max-width: 639px) 48vw, (max-width: 767px) 30vw, 240px">
-                            <img src="photos/brown_white_green_stripe.jpg" alt="Brown, white, and green striped hand-knitted blanket" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600" fetchpriority="high"
-                                 >
-                        </picture>
-                    </a>
+                <h1 class="text-3xl font-bold text-slate-800 text-center mb-4">Nanny Knits Gallery</h1>
+                <h2 class="text-2xl font-bold text-slate-700 text-center mb-12">Standard Blankets</h2>
+                
+                <!-- Grid container that will be populated by JavaScript -->
+                <div id="standard-gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
+                    <!-- JavaScript will fill this area -->
+                    <p class="text-slate-600 col-span-full text-center">Loading photos...</p>
+                </div>
+            </div>
+        </section>
 
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View pink and grey striped blanket on Instagram">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="photos/pink_grey_stripe_small.webp 400w, photos/pink_grey_stripe_medium.webp 600w"
-                                    sizes="(max-width: 639px) 48vw, (max-width: 767px) 30vw, 240px">
-                            <img src="photos/pink_grey_stripe.jpg" 
-                                 alt="Pink and grey striped hand-knitted blanket" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600"
-                                 loading="lazy" 
-                                 >
-                        </picture>
-                    </a>
-                    
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View Hello Kitty themed blanket on Instagram">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="photos/hello_kitty_small.webp 400w, photos/hello_kitty_medium.webp 600w"
-                                    sizes="(max-width: 639px) 48vw, (max-width: 767px) 30vw, 240px">
-                            <img src="photos/hello_kitty.jpg" 
-                                 alt="Hello Kitty themed hand-knitted blanket with pink and white details" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600" 
-                                 loading="lazy" 
-                                 >
-                        </picture>
-                    </a>
-
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View anchor design blanket on Instagram">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="photos/anchor_small.webp 400w, photos/anchor_medium.webp 600w"
-                                    sizes="(max-width: 639px) 48vw, (max-width: 767px) 30vw, 240px">
-                            <img src="photos/anchor.jpg" 
-                                 alt="Hand-knitted blanket with a nautical anchor design" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600" 
-                                 loading="lazy">
-                        </picture>
-                    </a>
-
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View Stitch themed blanket on Instagram">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="photos/stitch_small.webp 400w, photos/stitch_medium.webp 600w" sizes="(max-width: 639px) 48vw, (max-width: 767px) 30vw, 240px">
-                            <img src="photos/stitch.JPG" alt="Stitch (from Lilo & Stitch) themed blue hand-knitted blanket" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600" 
-                                 loading="lazy">
-                        </picture>
-                    </a>
-
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View Elmo themed blanket on Instagram">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="photos/elmo_small.webp 400w, photos/elmo_medium.webp 600w"
-                                    sizes="(max-width: 639px) 48vw, (max-width: 767px) 30vw, 240px">
-                            <img src="photos/elmo.jpg" 
-                                 alt="Elmo themed red hand-knitted blanket for children" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600" 
-                                 loading="lazy">
-                        </picture>
-                    </a>
-
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View ghost themed blanket on Instagram">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="photos/IMG_7179.webp 400w, photos/IMG_7179.webp 600w"
-                                    sizes="(max-width: 639px) 48vw, (max-width: 767px) 30vw, 240px">
-                            <img src="photos/IMG_7179.jpeg" 
-                                 alt="ghost themed blanket" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600" 
-                                 loading="lazy">
-                        </picture>
-                    </a>
-                    
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View Grinch themed blanket on Instagram">
-                        <picture>
-                            <source type="image/webp" srcset="photos/grinch1600.webp">
-                            <img src="photos/grinch1600.webp" alt="The Grinch with a Santa hat on a hand-knitted blanket" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600" loading="lazy">
-                        </picture>
-                    </a>
-            
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View smiling Grinch themed blanket on Instagram">
-                        <picture>
-                            <source type="image/webp" srcset="photos/grinch2600.webp">
-                            <img src="photos/grinch2600.webp" alt="A smiling Grinch on a bright green hand-knitted blanket" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600" loading="lazy">
-                        </picture>
-                    </a>
-            
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View snowman themed blanket on Instagram">
-                        <picture>
-                            <source type="image/webp" srcset="photos/snowman600.webp">
-                            <img src="photos/snowman600.webp" alt="A snowman with a top hat and scarf on a white hand-knitted blanket" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600" loading="lazy">
-                        </picture>
-                    </a>
-            
-                    <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" aria-label="View reindeer themed blanket on Instagram">
-                        <picture>
-                            <source type="image/webp" srcset="photos/raindeer.webp">
-                            <img src="photos/raindeer600.jpg" alt="A cute reindeer face on a tan hand-knitted blanket" 
-                                 class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover" 
-                                 width="600" height="600" loading="lazy">
-                        </picture>
-                    </a>
-                    </div>
+        <!-- Custom Blankets Gallery -->
+        <section id="custom-gallery" class="bg-slate-50 py-16 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-2xl font-bold text-slate-700 text-center mb-12">Custom Creations</h2>
+                
+                <!-- Grid container that will be populated by JavaScript -->
+                <div id="custom-gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
+                    <!-- JavaScript will fill this area -->
+                    <p class="text-slate-600 col-span-full text-center">Loading photos...</p>
+                </div>
+                
+                <!-- Link to Instagram -->
                 <div class="text-center mt-12">
                     <a href="https://www.instagram.com/nannyknits01/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500
-                                 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300 text-lg">
+                                text-white font-bold py-3 px-8 rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300 text-lg">
                         View More on Instagram
                     </a>
                 </div>
@@ -239,22 +124,143 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-slate-100 text-slate-800 text-center py-6 mt-auto">
         <p>&copy; <span id="current-year"></span> Nanny Knits. All rights reserved.</p>
         <p class="text-sm mt-1 text-gray-600">Handcrafted Blankets from Plymouth, MA.</p>
     </footer>
 
+    <!-- JavaScript Section -->
     <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- USER CONFIGURATION ---
+        // !!! IMPORTANT: Replace with your GitHub username and repository name
+        const GITHUB_USERNAME = 'meanderpaul';
+        const GITHUB_REPO = 'NannyKnits';
+        // !!! IMPORTANT: Replace with your Instagram URL
+        const INSTAGRAM_URL = 'https://www.instagram.com/nannyknits01/';
+        // --------------------------
+
+        // This base URL points to the 'photos' directory in your repo
+        const API_BASE_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/photos/`;
+
+        /**
+         * Creates descriptive alt text from a filename.
+         * e.g., "hello_kitty.jpg" -> "Hello kitty blanket"
+         */
+        function createAltText(filename) {
+            // Remove file extension
+            let name = filename.split('.').slice(0, -1).join('.');
+            // Replace underscores/hyphens with spaces
+            name = name.replace(/[_-]/g, ' ');
+            // Capitalize the first letter
+            name = name.charAt(0).toUpperCase() + name.slice(1);
+            return `${name} blanket`; // Add "blanket" for context
+        }
+
+        /**
+         * Fetches images from a GitHub directory and populates a grid.
+         */
+        async function loadGallery(directory, gridId, sectionTitle) {
+            const gridElement = document.getElementById(gridId);
+            if (!gridElement) {
+                console.error(`Gallery grid element with id "${gridId}" not found.`);
+                return;
+            }
+
+            // Set a loading message
+            gridElement.innerHTML = '<p class="text-slate-600 col-span-full text-center">Loading photos...</p>';
+            
+            try {
+                // Fetch the contents of the directory (e.g., .../photos/standard)
+                const response = await fetch(API_BASE_URL + directory);
+                
+                if (!response.ok) {
+                    // Handle common errors like "Not Found" if the repo or path is wrong
+                    if (response.status === 404) {
+                        throw new Error(`Directory not found at ${API_BASE_URL + directory}. Check your USERNAME, REPO, and directory names.`);
+                    }
+                    throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+                }
+                
+                const files = await response.json();
+                
+                // Filter for image files only (handles jpg, jpeg, png, webp, gif)
+                const imageFiles = files.filter(file => 
+                    file.type === 'file' && 
+                    /\.(jpe?g|png|gif|webp)$/i.test(file.name)
+                );
+
+                if (imageFiles.length === 0) {
+                    gridElement.innerHTML = `<p class="text-slate-600 col-span-full text-center">No photos found in the "${sectionTitle}" gallery yet.</p>`;
+                    return;
+                }
+
+                // Clear loading message
+                gridElement.innerHTML = '';
+
+                // Create and append each image element
+                imageFiles.forEach(file => {
+                    const altText = createAltText(file.name);
+                    
+                    // We use the direct download_url from the GitHub API response.
+                    // This URL is the raw image file.
+                    const galleryItem = document.createElement('a');
+                    galleryItem.href = INSTAGRAM_URL;
+                    galleryItem.target = '_blank';
+                    galleryItem.rel = 'noopener noreferrer';
+                    galleryItem.setAttribute('aria-label', `View ${altText} on Instagram`);
+
+                    const img = document.createElement('img');
+                    img.src = file.download_url; // This is the raw image URL from GitHub
+                    img.alt = altText;
+                    img.className = "rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 aspect-square object-cover";
+                    img.width = 600; // Set base width/height for layout consistency
+                    img.height = 600;
+                    img.loading = 'lazy'; // Lazy load images
+
+                    galleryItem.appendChild(img);
+                    gridElement.appendChild(galleryItem);
+                });
+
+            } catch (error) {
+                console.error(`Failed to load gallery "${directory}":`, error);
+                gridElement.innerHTML = `<p class="text-red-500 col-span-full text-center">Sorry, we couldn't load the photos right now. <br> ${error.message}</p>`;
+            }
+        }
+
+        // --- Load Both Galleries ---
+        // We get the current year for the footer here too.
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Load the galleries
+        // Check if config is set before fetching
+        if (GITHUB_USERNAME === 'meanderpaul' || GITHUB_REPO === 'NannyKnits') {
+            console.error("!!! IMPORTANT: You must update GITHUB_USERNAME and GITHUB_REPO in the script tag!");
+            const grids = document.querySelectorAll('#standard-gallery-grid, #custom-gallery-grid');
+            grids.forEach(grid => {
+                grid.innerHTML = `<p class="text-red-500 col-span-full text-center font-bold">Please configure your GitHub username and repo name in the HTML script to load images.</p>`;
+            });
+        } else {
+            // This is where the magic happens!
+            // It calls the function for the 'standard' directory
+            loadGallery('standard', 'standard-gallery-grid', 'Standard');
+            // It calls the function for the 'custom' directory
+            loadGallery('custom_blankets', 'custom-gallery-grid', 'Custom');
+        }
+        
+        // --- Mobile Menu Logic (from original file) ---
         const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
         if (menuButton && mobileMenu) {
             menuButton.addEventListener('click', () => {
                 const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
                 mobileMenu.classList.toggle('hidden');
                 menuButton.setAttribute('aria-expanded', String(!isExpanded));
             });
+
             mobileMenuLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
@@ -264,6 +270,7 @@
         } else {
             console.error("Mobile menu button or menu container not found!");
         }
+    });
     </script>
 </body>
 </html>
