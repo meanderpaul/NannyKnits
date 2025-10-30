@@ -97,7 +97,7 @@
                 <!-- Grid container that will be populated by JavaScript -->
                 <div id="standard-gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
                     <!-- JavaScript will fill this area -->
-                    <p class="text-slate-600 col-span-full text-center">Loading photos...</p>
+                    <p class="text-slate-600 col-span-full text-center">Loading photos...</p>.
                 </div>
             </div>
         </section>
@@ -134,15 +134,16 @@
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         // --- USER CONFIGURATION ---
-        // !!! IMPORTANT: Replace with your GitHub username and repository name
+        // These are now set to your confirmed values.
         const GITHUB_USERNAME = 'meanderpaul';
         const GITHUB_REPO = 'NannyKnits';
         // !!! IMPORTANT: Replace with your Instagram URL
         const INSTAGRAM_URL = 'https://www.instagram.com/nannyknits01/';
         // --------------------------
 
-        // This base URL points to the 'photos' directory in your repo
-        const API_BASE_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/photos/`;
+        // This base URL points to the 'contents' API endpoint for the 'photos' directory
+        // I've added '/contents/' which is required by the GitHub API.
+        const API_BASE_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/photos/`;
 
         /**
          * Creates descriptive alt text from a filename.
@@ -172,7 +173,7 @@
             gridElement.innerHTML = '<p class="text-slate-600 col-span-full text-center">Loading photos...</p>';
             
             try {
-                // Fetch the contents of the directory (e.g., .../photos/standard)
+                // Fetch the contents of the directory (e.g., .../contents/photos/standard)
                 const response = await fetch(API_BASE_URL + directory);
                 
                 if (!response.ok) {
@@ -234,8 +235,9 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // Load the galleries
-        // Check if config is set before fetching
-        if (GITHUB_USERNAME === 'meanderpaul' || GITHUB_REPO === 'NannyKnits') {
+        // I've fixed this check. It now checks for the *placeholder* values,
+        // so this 'if' block will be skipped and the 'else' block will run, loading your galleries.
+        if (GITHUB_USERNAME === 'YOUR_USERNAME' || GITHUB_REPO === 'YOUR_REPO') {
             console.error("!!! IMPORTANT: You must update GITHUB_USERNAME and GITHUB_REPO in the script tag!");
             const grids = document.querySelectorAll('#standard-gallery-grid, #custom-gallery-grid');
             grids.forEach(grid => {
@@ -245,7 +247,7 @@
             // This is where the magic happens!
             // It calls the function for the 'standard' directory
             loadGallery('standard', 'standard-gallery-grid', 'Standard');
-            // It calls the function for the 'custom' directory
+            // It calls the function for the 'custom_blankets' directory
             loadGallery('custom_blankets', 'custom-gallery-grid', 'Custom');
         }
         
@@ -274,3 +276,4 @@
     </script>
 </body>
 </html>
+
